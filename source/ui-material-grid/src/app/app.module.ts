@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule,
@@ -16,12 +15,12 @@ import { MatToolbarModule,
   MatTableModule,
   MatPaginatorModule,
    MatSortModule } from '@angular/material';
+   import { AvatarModule } from 'ngx-avatar';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavigationComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +36,8 @@ import { MatToolbarModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

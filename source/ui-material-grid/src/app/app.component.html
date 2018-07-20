@@ -1,1 +1,44 @@
-<app-navigation></app-navigation>
+<mat-toolbar>
+    Properties
+</mat-toolbar>
+<div class="basic-container">
+
+    <mat-grid-list cols="3">
+        <mat-grid-tile *ngFor="let tile of tiles">
+            <mat-card>
+                <mat-card-header>
+                    <ngx-avatar mat-card-avatar src="http://i1.au.reastatic.net/agencylogo/XRWXMT/12/20120927204448.gif"></ngx-avatar>
+                    <mat-card-title>{{tile.text}}</mat-card-title>
+                    <mat-card-subtitle>Really, they are!</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="http://i1.au.reastatic.net/640x480/88586227f9176f602d5c19cf06261108dbb29f03e30d1c4ce9fc2b51fb1e4bd6/main.jpg">
+                <mat-card-content>
+                    <p>Something new property</p>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</div>
+<mat-toolbar>
+    Saved Properties
+</mat-toolbar>
+<div class="basic-container">
+
+    <mat-grid-list cols="3">
+        <mat-grid-tile *ngFor="let tile of tiles">
+            <mat-card>
+                <mat-card-header>
+                    <img src="http://i1.au.reastatic.net/agencylogo/XRWXMT/12/20120927204448.gif">
+                    <mat-card-title>{{tile.text}}</mat-card-title>
+                    <mat-card-subtitle>Really, they are!</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="http://i1.au.reastatic.net/640x480/88586227f9176f602d5c19cf06261108dbb29f03e30d1c4ce9fc2b51fb1e4bd6/main.jpg">
+                <mat-card-content>
+                    <p>Something new property</p>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</div>
