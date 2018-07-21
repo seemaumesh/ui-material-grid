@@ -1,5 +1,5 @@
 export class Property {
-    price: string;
+    price: number;
     agency: {
         logo: string;
         brandingColors: {

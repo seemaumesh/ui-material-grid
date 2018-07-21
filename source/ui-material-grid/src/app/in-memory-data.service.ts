@@ -3,7 +3,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
       const properties = [{
-        'price': '$726,500',
+        'price': '726500',
         'agency': {
             'brandingColors': {
                 'primary': '#ffe512'
@@ -13,7 +13,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': '1',
         'mainImage': 'http://i2.au.reastatic.net/640x480/20bfc8668a30e8cabf045a1cd54814a9042fc715a8be683ba196898333d68cec/main.jpg'
     }, {
-        'price': '$560,520',
+        'price': '560520',
         'agency': {
             'brandingColors': {
                 'primary': '#fcfa3b'
@@ -23,7 +23,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': '2',
         'mainImage': 'http://i1.au.reastatic.net/640x480/88586227f9176f602d5c19cf06261108dbb29f03e30d1c4ce9fc2b51fb1e4bd6/main.jpg'
     }, {
-        'price': '$826,500',
+        'price': '826500',
         'agency': {
             'brandingColors': {
                 'primary': '#57B5E0'
@@ -34,7 +34,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'mainImage': 'http://i4.au.reastatic.net/640x480/98cee1b2a3a64329921fc38f7e2926a78d41fcc683fc48fb8a8ef2999b14c027/main.jpg'
     }];
     const savedProperties = [{
-        'price': '$526,500',
+        'price': '526500',
         'agency': {
             'brandingColors': {
                 'primary': '#000000'

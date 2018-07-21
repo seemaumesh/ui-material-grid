@@ -13,7 +13,7 @@
             <img mat-card-image [src]="property.mainImage">
 
             <mat-card-actions>
-                {{property.price}}
+                {{ property.price | currency:'AUD' }}
             </mat-card-actions>
             <popper-content #popper2Content>
                 <button mat-button (click)="OnAddProperty(property.id)">
@@ -35,7 +35,7 @@
             </mat-card-header>
             <img mat-card-image [src]="property.mainImage">
             <mat-card-actions>
-                {{property.price}}
+                {{ property.price | currency:'AUD' }}
             </mat-card-actions>
             <popper-content #popper1Content>
                 <button mat-button (click)="OnRemoveProperty(property.id)">

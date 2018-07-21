@@ -41,6 +41,5 @@ export class AppComponent implements OnInit {
     console.log(propertyId);
     const selectedProperty = this.savedProperties.filter(item => item.id === propertyId);
     this.savedProperties = this.savedProperties.filter(item => item.id !== propertyId);
-    this.properties.splice(this.properties.length, 0, selectedProperty[0]);
   }
 }

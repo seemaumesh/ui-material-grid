@@ -17,11 +17,21 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Just the app component is tested in here(Unit test)
+1. creation
+2. Presence of lists
+3. invoke service
+4. Add to the saved list
+5. Remove from the list
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+End to end test has not been implemented in this project
 
-## Further help
+## About
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project just contains one component, no navigation, simple project.
+It makes use of responsive angular material UI, ngx popper and ngx-color-picker(optional)
+It displays the list of properties and saved properties.
+The service and in memory fake result is used to represend import of modules.
+

@@ -105,7 +105,6 @@ describe('AppComponent', () => {
     app['properties'] = response;
     app['savedProperties'] = saved;
     app.OnRemoveProperty(1);
-    expect(app['properties'].length > 0).toBeTruthy();
-    expect(app['properties'][0].id === 1).toBeTruthy();
+    expect(app['savedProperties'].length === 0).toBeTruthy();
   }));
 });
