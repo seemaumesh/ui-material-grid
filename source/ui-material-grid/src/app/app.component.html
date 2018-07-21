@@ -1,40 +1,46 @@
-<mat-toolbar>
-    Properties
-</mat-toolbar>
-<div class="basic-container">
+<div class="verticle">
+    <div class="section">
+        <mat-toolbar>
+            Properties
+        </mat-toolbar>
+        <div class="basic-container">
 
-    <mat-grid-list cols="3">
-        <mat-grid-tile *ngFor="let property of properties">
-            <mat-card>
-                <mat-card-header>
-                    <img [src]="property.agency.logo">
-                </mat-card-header>
-                <img mat-card-image [src]="property.mainImage">
-                <mat-card-content>
-                    <p>Something new property</p>
-                </mat-card-content>
-            </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+            <mat-grid-list cols="1" rowHeight="4:3">
+                <mat-grid-tile *ngFor="let property of properties">
+                    <mat-card>
+                        <mat-card-header>
+                            <img [src]="property.agency.logo">
+                        </mat-card-header>
+                        <img mat-card-image [src]="property.mainImage">
+                        <mat-card-content>
+                            <span [style.color]="property.agency.brandingColors.primary" [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="property.agency.brandingColors.primary">Primary Color</span>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
 
-</div>
-<mat-toolbar>
-    Saved Properties
-</mat-toolbar>
-<div class="basic-container">
+        </div>
+    </div>
+    <div class="section">
+        <mat-toolbar>
+            Saved Properties
+        </mat-toolbar>
+        <div class="basic-container">
 
-    <mat-grid-list cols="3">
-        <mat-grid-tile *ngFor="let property of savedProperties">
-            <mat-card>
-                <mat-card-header>
-                    <img [src]="property.agency.logo">
-                </mat-card-header>
-                <img mat-card-image [src]="property.mainImage">
-                <mat-card-content>
-                    <p>Something new property</p>
-                </mat-card-content>
-            </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+            <mat-grid-list cols="1" rowHeight="4:3">
+                <mat-grid-tile *ngFor="let property of savedProperties">
+                    <mat-card>
+                        <mat-card-header>
+                            <img [src]="property.agency.logo">
+                        </mat-card-header>
+                        <img mat-card-image [src]="property.mainImage">
+                        <mat-card-content>
+                            <span [style.color]="property.agency.brandingColors.primary" [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="property.agency.brandingColors.primary">Primary Color</span>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
 
+        </div>
+    </div>
 </div>
