@@ -4,6 +4,11 @@ import { MatToolbarModule,
   MatCardModule } from '@angular/material';
   import { ColorPickerModule } from 'ngx-color-picker';
   import { HttpClientModule } from '@angular/common/http';
+  import {PropertyService} from './app.property.service';
+import {Property} from './Property';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { Observable } from 'rxjs';
 
 
 describe('AppComponent', () => {
@@ -15,6 +20,9 @@ describe('AppComponent', () => {
       imports: [MatToolbarModule,
       MatCardModule,
       ColorPickerModule,
+      HttpClientInMemoryWebApiModule.forRoot(
+        InMemoryDataService, { dataEncapsulation: false }
+      ),
       HttpClientModule]
     }).compileComponents();
   }));
@@ -28,5 +36,15 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelectorAll('mat-toolbar')[0].textContent.indexOf('Results') >= 0).toBeTruthy();
     expect(compiled.querySelectorAll('mat-toolbar')[1].textContent.indexOf('Saved Properties') >= 0).toBeTruthy();
+  }));
+  it('should call properties', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const propertyService = fixture.debugElement.injector.get(PropertyService);
+    const response: Property[] = [];
+    const spy = spyOn(propertyService, 'get').and.returnValue({ subscribe: () => response; });
+    const app = fixture.debugElement.componentInstance;
+    app.ngOnInit();
+    fixture.detectChanges();
+    expect(spy).toHaveBeenCalled();
   }));
 });

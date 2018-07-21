@@ -9,16 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ColorPickerModule } from 'ngx-color-picker';
 
 import { MatToolbarModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatIconModule,
-  MatListModule,
-  MatGridListModule,
-  MatCardModule,
-  MatMenuModule,
-  MatTableModule,
-  MatPaginatorModule,
-   MatSortModule } from '@angular/material';
+  MatCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -26,19 +17,8 @@ import { MatToolbarModule,
   ],
   imports: [
     BrowserModule,
-    LayoutModule,
     MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatGridListModule,
     MatCardModule,
-    MatMenuModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
