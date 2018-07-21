@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import {PropertyService} from './app.property.service';
+import {Property} from './Property';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app';
-  tiles = [
-    {text: 'One', cols: 2, rows: 1, color: '#142A5C'},
-    {text: 'Two', cols: 1, rows: 1, color: '#B7A0E8'},
-    {text: 'Three', cols: 1, rows: 2, color: '#FF0000'},
-    {text: 'Four', cols: 3, rows: 1, color: '#D9EDD9'},
-  ];
+export class AppComponent implements OnInit {
+  constructor(private service: PropertyService) {}
+  properties: Property[];
+  savedProperties: Property[];
+
+  ngOnInit() {
+    this.service.get('properties')
+    .subscribe(result => {
+      this.properties = result;
+    });
+    this.service.get('savedProperties')
+    .subscribe(result => {
+      this.savedProperties = result;
+    });
+  }
 }
