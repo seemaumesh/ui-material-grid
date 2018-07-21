@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
       sanitizer.bypassSecurityTrustResourceUrl('assets/icon/baseline-add-24px.svg'));
 
   }
-  properties: Property[];
+  public properties: Property[];
   savedProperties: Property[];
 
   ngOnInit() {
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     console.log(propertyId);
     const selectedProperty = this.properties.filter(item => item.id === propertyId);
     this.properties = this.properties.filter(item => item.id !== propertyId);
-    this.savedProperties.splice(this.properties.length, 0, selectedProperty[0]);
+    this.savedProperties.splice(this.savedProperties.length, 0, selectedProperty[0]);
   }
 
   OnRemoveProperty(propertyId: number) {

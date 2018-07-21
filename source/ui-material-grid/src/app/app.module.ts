@@ -29,7 +29,7 @@ import { MatToolbarModule,
       InMemoryDataService, { dataEncapsulation: false }
     ),
     ColorPickerModule,
-    NgxPopperModule.forRoot({placement: 'top', trigger: 'hover'})
+    NgxPopperModule.forRoot({placement: 'bottom', trigger: 'hover'})
   ],
   providers: [],
   bootstrap: [AppComponent]
