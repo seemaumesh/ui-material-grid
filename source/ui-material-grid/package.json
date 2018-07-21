@@ -25,6 +25,8 @@
         "angular-in-memory-web-api": "^0.6.0",
         "core-js": "^2.5.4",
         "ngx-color-picker": "^6.5.0",
+        "ngx-popper": "^4.1.0",
+        "popper.js": "^1.14.3",
         "rxjs": "^6.2.2",
         "zone.js": "^0.8.26"
     },

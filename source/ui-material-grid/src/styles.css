@@ -4,3 +4,12 @@
 body {
     margin: 0;
 }
+
+.popper--dark {
+    background-color: black;
+    z-index: 3;
+}
+
+.mat-icon {
+    color: white;
+}

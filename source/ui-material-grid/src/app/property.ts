@@ -4,8 +4,8 @@ export class Property {
         logo: string;
         brandingColors: {
             primary: string
-        },
-        id: number;
-        mainImage: string
+        }
     };
+    id: number;
+    mainImage: string;
 }

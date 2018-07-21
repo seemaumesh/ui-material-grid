@@ -1,16 +1,24 @@
 <div class="verticle">
+
     <div class="section">
-        <mat-toolbar>
+        <mat-toolbar id="result">
             Results
         </mat-toolbar>
-        <mat-card *ngFor="let property of properties">
+
+        <mat-card *ngFor="let property of properties" [popper]="popper2Content" [popperApplyClass]="'popper--dark'" [popperTimeout]="1000">
             <mat-card-header>
                 <img [src]="property.agency.logo">
             </mat-card-header>
             <img mat-card-image [src]="property.mainImage">
+
             <mat-card-actions>
                 <span [style.color]="property.agency.brandingColors.primary" [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="property.agency.brandingColors.primary">Primary Color</span>
             </mat-card-actions>
+            <popper-content #popper2Content>
+                <button mat-button (click)="OnAddProperty(property.id)">
+                            <mat-icon>add</mat-icon>
+                            </button>
+            </popper-content>
         </mat-card>
 
     </div>
@@ -18,7 +26,8 @@
         <mat-toolbar>
             Saved Properties
         </mat-toolbar>
-        <mat-card *ngFor="let property of savedProperties">
+
+        <mat-card *ngFor="let property of savedProperties" [popper]="popper1Content" [popperApplyClass]="'popper--dark'" [popperTimeout]="1000">
             <mat-card-header>
                 <img [src]="property.agency.logo">
             </mat-card-header>
@@ -26,6 +35,11 @@
             <mat-card-actions>
                 <span [style.color]="property.agency.brandingColors.primary" [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="property.agency.brandingColors.primary">Primary Color</span>
             </mat-card-actions>
+            <popper-content #popper1Content>
+                <button mat-button (click)="OnRemoveProperty(property.id)">
+                    <mat-icon>remove</mat-icon>
+                    </button>
+            </popper-content>
         </mat-card>
     </div>
 </div>

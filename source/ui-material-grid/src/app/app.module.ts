@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ColorPickerModule } from 'ngx-color-picker';
+import {NgxPopperModule} from 'ngx-popper';
 
 import { MatToolbarModule,
+  MatButtonModule,
+  MatIconModule,
   MatCardModule} from '@angular/material';
 
 @NgModule({
@@ -19,11 +22,14 @@ import { MatToolbarModule,
     BrowserModule,
     MatToolbarModule,
     MatCardModule,
+    MatButtonModule,
+    MatIconModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    ColorPickerModule
+    ColorPickerModule,
+    NgxPopperModule.forRoot({placement: 'top', trigger: 'hover'})
   ],
   providers: [],
   bootstrap: [AppComponent]
