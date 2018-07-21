@@ -28,10 +28,14 @@ Just the app component is tested in here(Unit test)
 
 End to end test has not been implemented in this project
 
+## components used
+1. angular material UI
+2. ngx popper
+3. ngx-color-picker
+
 ## About
 
 This project just contains one component, no navigation, simple project.
-It makes use of responsive angular material UI, ngx popper and ngx-color-picker(optional)
 It displays the list of properties and saved properties.
 The service and in memory fake result is used to represend import of modules.
 
